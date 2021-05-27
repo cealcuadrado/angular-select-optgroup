@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div class="form-group">
+      <label id="movie">Select a movie</label>
+      <select class="form-control" id="movie" name="movie" [(ngModel)]="currentMovie">
+        <optgroup label="Action Movies">
+          <option *ngFor="let movie of actionMovies" [value]="movie">
+            {{movie}}
+          </option>
+        </optgroup>
+        <optgroup label="Sci-Fi Movies">
+          <option *ngFor="let movie of scifiMovies" [value]="movie">
+            {{movie}}
+          </option>
+        </optgroup>
+        <optgroup label="Adventure Movies">
+          <option *ngFor="let movie of adventureMovies" [value]="movie">
+            {{movie}}
+          </option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-12">
+    <p><strong>Current movie:</strong> {{currentMovie}}</p>
+  </div>
+</div>
